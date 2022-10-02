@@ -222,10 +222,11 @@ public class CalculatorFrame extends JFrame {
         if (caretStart == caretEnd) {
             if (caretStart == 0) return;
             textField.setText(remove(text, caretStart - 1));
+            textField.setCaretPosition(caretStart - 1);
         } else {
             textField.setText(text.substring(0, caretStart) + text.substring(caretEnd));
+            textField.setCaretPosition(caretStart);
         }
-        textField.setCaretPosition(caretStart - 1);
         textField.getCaret().setVisible(true);
     }
 

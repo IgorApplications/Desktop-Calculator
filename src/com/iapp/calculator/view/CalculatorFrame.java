@@ -210,7 +210,7 @@ public class CalculatorFrame extends JFrame {
 
         textField.setText(text.substring(0, caretStart) +
                 action + text.substring(caretEnd));
-        textField.setCaretPosition(caretStart);
+        textField.setCaretPosition(caretStart + action.length());
         textField.getCaret().setVisible(true);
     }
 
